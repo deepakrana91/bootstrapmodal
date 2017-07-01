@@ -1,0 +1,21 @@
+.Modal-brand {
+    
+    color: white !important;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.nav_list > li > a{
+
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #0099cc !important;
+}
+
+#sign_up{
+
+    margin-left: 170;
+    max-width: 200;
+}

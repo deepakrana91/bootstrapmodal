@@ -1,0 +1,123 @@
+<html>
+<head>
+    <title>Bootstrap Modal</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="custom.css">
+
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+
+    <nav class="navbar" style="background-color:#0099cc; color:white; border-radius:0;" >
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" 
+      aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand Modal-brand" href="#">Registration Page using Modal</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right nav_list">
+        <li><a href="#signup" data-toggle="modal" data-target="#signup">Sign up</a></li>
+        <li><a href="">Login</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+ </nav>
+
+ <!-- Modal definition " Calling the signup ID" -->
+
+ <div id="signup" class="modal fade" role="dialog" style="margin-left:400px; margin-right:400px; margin-top:60px;">
+  <div class="modal-diolog" >
+      <div class="modal-content">
+          <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3 class="modal-title">Sign up</h3>
+              
+          </div>
+
+             <div class="modal-body">
+                 <div class="row">
+                <form >
+                     <div class="row form-group">
+                        <div class="col-sm-12">
+                            <input type="text" name="fullname" id="fullname" class="form-control"
+                            placeholder="Fullname">
+                        </div> 
+                     </div>
+                      <div class="row form-group">
+                          
+                        <div class="col-sm-12">
+                            <input type="text" name="email" id="email" class="form-control"
+                            placeholder="Mobile Number">
+                        </div> 
+                     </div>
+
+                     <div class="row form-group">
+                         
+                        <div class="col-sm-12">
+                            <input type="text" name="mobile" id="mobile" class="form-control"
+                            placeholder="Mobile Number">
+                        </div> 
+                     </div>
+                     <div class="row form-group">
+                        <div class="col-sm-12">
+                            <input type="submit" name="submit" id="sign_up" class="form-control btn btn-primary">
+                            
+                            
+                        </div> 
+                     </div>
+                     
+                 </form>
+                                     
+                 </div>
+                
+                 
+             </div>
+
+
+                <div class="modal-footer">
+                    <p class="text-center">Already have an account? <a href="">Login</a></p>
+                </div>
+          
+          
+      </div>
+        
+  </div>
+ 
+</div>
+
+<!-- Area to Display the Info on the HTML page..-->
+
+<div class="container-fluid" style="margin-top: 80px">
+     <div class="col-sm-12 details" style="text-align: center;
+        font-size: 20px;">
+    </div>
+</div>
+
+
+
+</body>    
+
+<!-- Javascript to get the data from the modal and then display through the HTML page-->
+
+<script type="application/javascript">
+    $('form').submit(function(e){
+        e.preventDefault();
+        $('#modal').modal('toggle');
+        var name = $('#fullname').val();
+        var mobile = $('#mobile').val();
+        var email = $('#email').val();
+        $('.details').append('Entered details are - Name: '+name+' ,Mobile Number: '+mobile+' ,email: '+email);
+    })
+    </script>
+
+</html>
